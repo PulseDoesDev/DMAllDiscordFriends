@@ -1,7 +1,7 @@
 # Bot config!
 token = "TOKEN HERE"
 
-messages = ["Hi."]
+messages = ["Hi.", "Hi"] # After the " of you need to use a ,
 
 import discord
 
