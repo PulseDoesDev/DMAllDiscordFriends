@@ -1,3 +1,8 @@
+# Bot config!
+token = "TOKEN HERE"
+
+messages = ["Hi.", "Hi"] # After the " of you need to use a ,
+
 import discord
 
 client = discord.Client()
@@ -6,9 +11,12 @@ client = discord.Client()
 async def on_connect():
   for user in client.user.friends:
     try:
-      await user.send('')
+      await user.send(random.choice(messages))
       print(f"messaged: {user.name}")
     except:
        print(f"couldnt message: {user.friends}")
-client.run('', bot=False)
+
+client.run(token, bot=False)
+else:
+client.run(token)
 
